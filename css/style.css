@@ -47,7 +47,26 @@ body{
 	position:absolute;
 	top:-10000px;
 }
-
+.btn{
+	font-family:"Roboto Bold";
+	color:#fff;
+	text-decoration:none;
+	border-radius:30px;
+	font-size: 18px;
+	text-shadow: 10px 10px 10px 10px #000;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+	box-shadow:0px 4px 3px 0px rgba(0,0,0,0.5);
+	background:linear-gradient(to bottom, #f26843, #e74b36);
+}
+.btn:hover{
+	background:linear-gradient(to bottom, #f58669, #f58669);
+}
+.btn:active{
+	background:linear-gradient(to bottom, #d84732, #e1613e);
+}
 /*::::::::::::::::::::*/
 /*::::: HEADER :::::::*/
 /*::::::::::::::::::::*/
@@ -161,19 +180,14 @@ body{
 		font-size:60px;
 	}
 	.slider__item .btn{
-		font-family:"Roboto Bold";
 		position:relative;
 		top:-367px;
-		color:#fff;
-		text-decoration:none;
 		border-radius:30px;
 		font-size: 32px;
 		padding-top:7px;
 		padding-bottom:14px;
 		padding-left:40px;
-		padding-right:40px;
-		box-shadow:0px 4px 3px 0px rgba(0,0,0,0.5);
-		background:linear-gradient(to bottom, #f26843, #e74b36);
+		padding-right:40px;	
 	}
 	.slider-controls{
 		display:flex;
@@ -198,3 +212,85 @@ body{
 		.slider-controls__item .active{
 			
 		}
+
+	.promo-block{
+		margin:0px;
+		padding:0px;
+	}
+		.promo-block__cards{
+			display: flex;
+			padding:0px;
+			margin:0px;
+			margin-left:-13px;
+			margin-right:-20px
+		}
+		.promo-card{
+			font-family: "Roboto Bold";
+			overflow: hidden;
+			position:relative;
+			border-radius:15px;
+			margin:13px;
+			margin-top:0px;
+			padding:0px;
+			width:560px;
+			height:230px;
+			box-sizing:border-box;			
+		}
+			.promo-card-container{
+				box-sizing:border-box;
+				width:100%;
+				height:100%;
+				position:relative;
+				padding:20px;
+				padding-top:10px
+			}
+				.promo-card .cover{
+					position:absolute;
+					width:100%;
+					height: auto;
+					z-index:0;
+				}
+				.promo-card h2{
+					margin:0px;
+					font-size:36px;
+					color:#fff;
+					position: relative;
+					z-index: 2;
+				}
+				.promo-card p{
+					margin-top:12px;
+					font-size:18px;
+					color:#fff;
+					position: relative;
+					z-index: 2;
+				}
+				.promo-card .btn{
+					position: absolute;
+					bottom:25px;
+					right:22px;
+					z-index: 2;
+				}
+	.promo-block__icecreams{
+		display: flex;
+		justify-content: space-between;
+	}
+		.promo-icecream{
+			width:267px;
+			height:344px;
+			margin:12px;
+		}
+			.promo-icecream .hit{
+				position:absolute;
+			}
+			.promo-icecream .round-image{
+				border-radius:50%;
+				overflow: hidden;
+				width:267px;
+				height:267px;
+			}
+			.promo-icecream .icecream{
+				widht:100%;
+				height:100%;
+			}
+			.promo-icecream .price{}
+			.promo-icecream .desc{}
