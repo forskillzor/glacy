@@ -31,6 +31,22 @@ body{
 	margin-left:auto;
 	margin-right:auto;
 }
+.container-bg{
+	box-sizing:border-box;
+	padding:0px 27px;
+	margin:0px;
+	width: 1200px;
+	background-color: #849d8f;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(../img/sliderbg.png);
+	background-repeat: no-repeat;
+	background-position: top;
+}
+.visually-hidden{
+	position:absolute;
+	top:-10000px;
+}
 
 /*::::::::::::::::::::*/
 /*::::: HEADER :::::::*/
@@ -41,11 +57,12 @@ body{
 	padding-right:8px;
 }
 .menu-top{
-	height: 74px;
 	display:flex;
+	justify-content:space-between;
 	align-content:center;
 	align-items:stretch;
 	padding:0px 0px;
+	height: 74px;
 }
 	.menu-top li{
 		position:relative;
@@ -53,7 +70,19 @@ body{
 		.menu-top .menu-item{
 			font-family:"Roboto Bold";
 			color:#fff;
-
+		}
+		.menu-item__active{
+			background-color:#d07058;
+		}
+	.main-menu{
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		margin:0px;
+		padding:0px;
+		list-style:none;
+	}
+		.main-menu .menu-item{
 			padding-top:4px;
 			padding-bottom: 7px;
 			padding-left:13px;
@@ -61,20 +90,62 @@ body{
 			border-radius:20px;
 			margin:1px;
 		}
-		.menu-item__active{
-			background-color:#d07058;
+		.main-menu .menu-item:hover{
+			background-color:#f7f6f3;
+			color:#000;
 		}
-	.main-menu{
+	.user-menu{
+		font-family:"Roboto Medium";
+		font-size:14px;
 		display:flex;
+		justify-content:flex-end;
 		align-items:center;
 		margin:0px;
 		padding:0px;
 		list-style:none;
+
 	}
-	.user-menu{
-		display:flex;
-		align-items:center;
-		margin:0px;
-		padding:0px;
+		.user-menu .menu-item{
+			position:relative;
+			background-color:rgba(255,255,255,0.2);
+			border-radius:15px;
+
+			padding-top:7px;
+			padding-bottom: 6px;
+			padding-left:22px;
+			padding-right:20px;
+			margin-left:20px;
+		}
+		.user-menu .menu-item:hover,
+		.user-menu .menu-item:hover g{
+			background-color:#f8f7f4;
+			color:#000;
+			fill:#000;
+		}
+			.menu-item svg{
+				position:relative;
+				top:3px;
+				right:5px;
+			}
+		#search{
+			padding:7px;
+		}
+			#search svg{
+				top:2px;
+				right:0px;
+				padding:0px;
+				margin-left:0px;
+			}
+.slider{
+	list-style:none;
+	text-align:center;
+}
+	.slider .item{
+		display:none;
+	}
+	.slider .item.active{
+		display:block;
+	}
+	.slider-controls{
 		list-style:none;
 	}
