@@ -368,6 +368,7 @@ body{
 		display: flex;
 		margin-left:-10px;
 		margin-right:-10px;
+		margin-bottom: 20px;
 	}
 	.info__card{
 		box-sizing:border-box;
@@ -436,4 +437,56 @@ body{
 					border:none;
 					margin-left:10px;
 					padding:10px 15px;
+				}
+			.map-section{
+				box-sizing:border-box;
+				position: relative;
+				margin-left:-27px;
+				margin-right:-27px;
+				height: 430px;
+				overflow: hidden;
+			}
+				.map-section .map{
+					position: absolute;
+					height:auto;
+					top:-94px;
+					left:-19px;
+				}
+				.map-section .pin{
+					position: absolute;
+					bottom:152px;
+					left:266px;
+					z-index:2;
+				}
+
+				.map-info-block{
+					position: absolute;
+					box-sizing:border-box;
+					width:303px;
+					height:306px;
+					background-color:#fff;
+					border-radius:15px;
+					top:60px;
+					right:27px;
+					padding:17px 27px;
+
+				}
+				.map-info-block p.small{
+					font-family:"Roboto Regular";
+					font-size:14px;
+					line-height:20px;
+					color:#323232;
+					margin-bottom:0px;
+					/*position: absolute;*/
+				}
+				.map-info-block p.big{
+					font-family:"Roboto Bold";
+					font-size:18px;
+					margin-top:0px;
+					/*position: absolute;*/
+				}
+				.map-info-block .btn{
+					position: absolute;
+					margin-top:14px;
+					padding:10px 27px;
 				}
