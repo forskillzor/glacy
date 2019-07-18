@@ -137,15 +137,64 @@ body{
 				margin-left:0px;
 			}
 .slider{
+	display:flex;
+	justify-content:center;
+	position:relative;
 	list-style:none;
 	text-align:center;
+	padding:0px;
+	height:540px;
 }
-	.slider .item{
+	.slider__item{
 		display:none;
 	}
-	.slider .item.active{
+	.slider__item.active{
 		display:block;
 	}
+	.slider__item .capture{
+		font-family:"Roboto Bold";
+		color:#fff;
+		line-height:60px;
+		position:relative;
+		top:-350px;
+		left:0px;
+		font-size:60px;
+	}
+	.slider__item .btn{
+		font-family:"Roboto Bold";
+		position:relative;
+		top:-367px;
+		color:#fff;
+		text-decoration:none;
+		border-radius:30px;
+		font-size: 32px;
+		padding-top:7px;
+		padding-bottom:14px;
+		padding-left:40px;
+		padding-right:40px;
+		box-shadow:0px 4px 3px 0px rgba(0,0,0,0.5);
+		background:linear-gradient(to bottom, #f26843, #e74b36);
+	}
 	.slider-controls{
+		display:flex;
+		position:absolute;
+		bottom:42px;
+		left:-45px;
 		list-style:none;
 	}
+		.slider-controls__item{
+			margin:5px;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			width: 16px;
+			height: 16px;
+		}
+		.slider-controls__item:hover{
+			cursor:pointer;
+		}
+		.slider-controls__item.active{
+			background-color:#fff;
+		}
+		.slider-controls__item .active{
+			
+		}
