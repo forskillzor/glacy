@@ -222,7 +222,8 @@ body{
 			padding:0px;
 			margin:0px;
 			margin-left:-13px;
-			margin-right:-20px
+			margin-right:-20px;
+			margin-bottom:15px;
 		}
 		.promo-card{
 			font-family: "Roboto Bold";
@@ -272,12 +273,19 @@ body{
 				}
 	.promo-block__icecreams{
 		display: flex;
+		margin-left:-13px;
+		margin-bottom: 4px;
 		justify-content: space-between;
 	}
 		.promo-icecream{
+			position:relative;
 			width:267px;
 			height:344px;
-			margin:12px;
+			margin:13px;
+			padding:0px;
+		}
+		.promo-icecream a{
+			text-decoration:none;	
 		}
 			.promo-icecream .hit{
 				position:absolute;
@@ -292,5 +300,76 @@ body{
 				widht:100%;
 				height:100%;
 			}
-			.promo-icecream .price{}
-			.promo-icecream .desc{}
+			.promo-icecream .price{
+				position:absolute;
+				bottom:86px;
+				margin:0px;
+				font-family:"Roboto Bold";
+				font-size:45px;
+				color:#fff;
+			}
+				.price .ruble{
+					position: relative;
+					top:4px;
+					right:8px;
+				}
+				.price .kg{
+					position:relative;
+					right:8px;
+					font-size:30px;
+				}
+			.promo-icecream .desc{
+				color:#fff;
+				text-align:center;
+				padding:0px;
+				text-decoration:underline;
+			}
+	.about{
+		display:flex;
+		flex-direction:column;
+		box-sizing:border-box;
+		width: 1146px;
+		height: auto;
+		background-color:rgb(245, 247, 250);
+		background-image:url("../img/cockie.jpg");
+		border-radius: 15px;
+		padding: 30px 20px;
+		color: #323232;
+	}
+		.about__header{
+			font-family: "Roboto Medium";
+			font-size:24px;
+			margin-top: 0px;
+			margin-bottom: 17px;
+		}
+		.about-row{
+			display: flex;
+			flex-wrap:wrap;
+			margin-left:-15px;
+			margin-right:-15px;
+		}
+		.about__item{
+			display: flex;
+			margin:0px 15px;
+		}
+		.about__item-ico{
+			position:relative;
+			top:-19px;
+		}
+			.about__paragraph{
+				width:480px;
+				font-size:16px;
+				margin-left:8px;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+	.info{}
+	.info__card{
+		background-color:#fff;
+		background-image:url("../img/card_malina.jpg");
+		width: 560px;
+		height: 220px;
+		border-radius:15px;
+	}
+	.info__card .tip{}
+	.info__card .to-blog{}
