@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"> 
@@ -84,7 +84,14 @@
   	<div class="catalog">
   		<h2 class="catalog__header">Сливочное мороженое</h2>
   	</div>
-  	
+  	<form action="get" class="catalog__filter">
+  		<label for="sort-type">Сортировка</label>
+  		<select name="sort_by" id="sort_by" for="select">
+  			<option value="">по популярности</option>
+  			<option value="">по цене</option>
+  		</select>
+  		<input type="range" multiple min="0" step="1" max="10" data-values="1 9">
+  	</form>
   </main>
 
   <footer>
