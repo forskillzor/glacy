@@ -51,6 +51,7 @@ body{
 	font-family:"Roboto Bold";
 	color:#fff;
 	text-decoration:none;
+	border:none;
 	border-radius:30px;
 	font-size: 18px;
 	text-shadow: 10px 10px 10px 10px #000;
@@ -58,7 +59,7 @@ body{
 	padding-bottom:10px;
 	padding-left:20px;
 	padding-right:20px;
-	box-shadow:0px 4px 3px 0px rgba(0,0,0,0.5);
+	box-shadow:0px 2px 0px 0px rgba(231,75,54,0.8);
 	background:linear-gradient(to bottom, #f26843, #e74b36);
 }
 .btn:hover{
@@ -102,6 +103,7 @@ body{
 		list-style:none;
 	}
 		.main-menu .menu-item{
+			position: relative;
 			padding-top:4px;
 			padding-bottom: 7px;
 			padding-left:13px;
@@ -112,7 +114,73 @@ body{
 		.main-menu .menu-item:hover{
 			background-color:#f7f6f3;
 			color:#000;
+
 		}
+		#item-catalog:hover .popup-menu{
+			opacity:1;	
+			z-index:1;		
+		}
+		#item-catalog:hover .menu-item{
+			background-color:#f7f6f3;
+			color:#000;
+		}
+			.popup-menu{
+				display:block;
+				opacity:0;
+				position: absolute;
+				top:33px;
+				left:-7px;
+				box-sizing:border-box;
+				width:143px;
+				list-style:none;
+				background-color:#fff;
+				color:#000;
+				padding-left:0px;
+				padding-top:7px;
+				border-radius:5px;
+				z-index:5;
+				padding-bottom:6px;
+				box-shadow:0px 6px 5px 3px rgba(0,0,0,0.2);
+				transition: all .2s;
+				z-index:0;
+			}
+			.popup-menu::before{
+				display:block;
+				content:"";
+				position:absolute;
+				top:-8px;
+				left:0px;
+				width:142px;
+				height:10px;
+				background-color:transparent;
+			}
+				.popup-menu__header{
+					display:inline-block;
+					box-sizing:border-box;
+
+					position:relative;
+					left:8px;
+
+					font-size:14px;
+					font-weight:bold;
+					padding-top:4px;
+					padding-bottom:10px;
+					padding-left:13px;
+					padding-right:57px;
+					padding-bottom:13px;
+					border-bottom: 1px solid #d2d2d2;
+					margin-bottom:0px;
+				}
+				.popup-menu__item {
+					display:block;
+					font-family:"Roboto Regular";
+					font-size:14px;
+					line-height:31px;
+					padding-left:20px;
+				}
+				.popup-menu__item:hover{
+					background-color:#fbded7;
+				}
 	.user-menu{
 		font-family:"Roboto Medium";
 		font-size:14px;
@@ -123,6 +191,9 @@ body{
 		padding:0px;
 		list-style:none;
 
+	}
+	.menu-top form{
+		box-shadow:0px 6px 5px 3px rgba(0,0,0,0.2);
 	}
 		.user-menu .menu-item{
 			position:relative;
@@ -146,15 +217,211 @@ body{
 				top:3px;
 				right:5px;
 			}
-		#search{
+		#search_toggler:hover #search-form{
+			opacity:1;
+			z-index:1;
+		}
+		#search_toggler:hover a{
+			color:#000;
+			background-color:#f7f6f3;
+		}
+		#search_toggler:hover g{
+			fill:#000;
+		}
+		#search_toggler a{
+			position: relative;
 			padding:7px;
 		}
-			#search svg{
+			#search_toggler svg{
 				top:2px;
 				right:0px;
 				padding:0px;
 				margin-left:0px;
 			}
+			#search-form{
+				opacity:0;
+				position: absolute;
+				top:31px;
+				right:-1px;
+				z-index:2;
+				background-color:#f8f7f4;
+				border-radius:5px;
+				padding:20px 15px;
+				transition:all .2s;
+				z-index:-1;
+			}
+				#search{
+					box-sizing:border-box;
+					width:311px;
+					font-family:"Roboto Regular";
+					font-size:14px;
+					padding:13px 14px;
+					border:1px solid #d3d3d2;
+					border-radius:5px;
+	
+				}
+		#search_toggler{
+			position: relative;
+		}
+		#signin_toggler:hover #signin_form{
+			opacity:1;
+			Z-index:1;
+		}
+		#signin_toggler:hover a{
+			color:#000;
+			background-color:#f7f6f3;
+		}
+		#signin_toggler:hover g{
+			fill:#000;
+		}
+		#signin_form{
+			opacity:0;
+			position: absolute;
+			top:33px;
+			right:0px;
+
+			background-color:#f8f7f4;
+			padding:20px 17px;
+			border-radius:5px;
+			z-index:-1;
+			transition: all .2s;
+		}
+			#email,
+			#password{
+				box-sizing:border-box;
+				width:241px;
+				font-family:"Roboto Regular";
+				font-size:14px;
+				padding:13px 14px;
+				border:1px solid #d3d3d2;
+				border-radius:5px;
+				margin-bottom:20px;
+			}
+			#signin_form button{
+				font-size:18px;
+				border:none;
+				padding:10px 24px;
+				border-radius:20px;
+			}
+			#signin_form ul{
+				list-style:none;
+				float:right;
+				padding-left:0px;
+				padding-right:3px;
+				padding-top:0px;
+			}
+			#signin_form a{
+				font-size:13px;
+				line-height:22px;
+				color:#323232;
+			}
+			#signin_form a:hover{
+				color:#e84d37;
+			}
+	#cat_toggler{
+		position: relative;
+	}
+		#cat_toggler:hover #cat-forma{
+			opacity:1;
+			z-index:1;
+		}
+		#cat_toggler:hover a{
+			color:#000;
+			background-color:#f7f6f3;
+		}
+		#cat_toggler:hover g{
+			fill:#000;
+		}
+		.cat-form{	
+			font-family: "Roboto Regular";
+			font-size: 13px;
+			position: absolute;
+			top:34px;
+			right:1px;
+			box-sizing:border-box;
+			width:539px;
+			background-color:#f8f7f4;
+			padding:16px 17px;
+			padding-right:12px;
+			border-radius:5px;
+			z-index:-1;
+		
+		}
+			.cat-form__row{
+				display: flex;
+				justify-content:flex-start;
+				align-items:top;
+				box-sizing:border-box;
+				width:100%;	
+				padding-top:13px;
+				padding-right:0px;
+				padding-left:2px;
+				margin-bottom:6px;
+			}
+				.cat-form__close-button{
+					position: relative;
+					width:15px;
+					height:15px;
+					margin-right:7px;
+				}
+				.cat-form__close-button::before,
+				.cat-form__close-button::after{
+					content:'';
+					position: absolute;
+					top:6px;
+					left:0px;
+					width: 15px;
+					height: 1px;
+					background-color:#000;
+				}
+				.cat-form__close-button::before{
+					transform:rotate(45deg);
+				}
+				.cat-form__close-button::after{
+					transform:rotate(-45deg);
+				}
+				.cat-form__cat_ico{
+					position:relative;
+					top:-10px;
+					border-radius:50%;
+					width: 34px;
+					height: 34px;
+					margin-right:13px;
+				} 
+				.cat-form__product{
+					width:226px;
+					margin-right:21px;
+					margin-top:0px;
+					margin-bottom:0px;
+				}
+				.cat-form__pics{
+					width:118px;
+					margin-right:5px;
+					margin-top:0px;
+				}
+				.cat-form__pics .price{
+					color:#999999;
+				}
+				.cat-form__sum{
+					margin-top:0px;
+				}
+			.cat-form__total{
+				font-family:"Roboto Bold";
+				font-size:15px;
+				text-align:right;
+				border-top:1px solid #d2d2d2;
+				padding-top:12px;
+				margin-top:14px;
+				margin-bottom:14px;
+			}
+			.align-right{
+				text-align: right
+			}
+				.cat-form__button{
+					text-align:right;
+					display:inline-block;
+					padding:10px 15px;
+				}
 .slider{
 	display:flex;
 	justify-content:center;
@@ -205,6 +472,7 @@ body{
 		}
 		.slider-controls__item:hover{
 			cursor:pointer;
+			background-color:#b2c1b7;
 		}
 		.slider-controls__item.active{
 			background-color:#fff;
@@ -324,6 +592,10 @@ body{
 				padding:0px;
 				text-decoration:underline;
 			}
+			.promo-icecream .desc:hover{
+				color:#e84d37;
+			}
+		
 	.about{
 		display:flex;
 		flex-direction:column;
@@ -393,6 +665,9 @@ body{
 				font-family:"Roboto Medium";
 				font-size:24px;
 				color:#323232;
+			}
+			#blog a:hover{
+				color:#e84d37;
 			}
 			.info__card .tip{}
 			.info__card .to-blog{}
@@ -490,9 +765,18 @@ body{
 					margin-top:14px;
 					padding:10px 27px;
 				}
+
+/*::::::::::::::::::::::::::*/
+/*:::::::: FOOTER ::::::::::*/
+/*::::::::::::::::::::::::::*/
+
 footer{
 	display:flex;
 	justify-content:space-between;
+}
+
+footer a:hover{
+	color:#e84d37;
 }
 
 .social-links{
