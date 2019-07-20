@@ -1,4 +1,4 @@
-var background = document.querySelector(".container-bg");
+/*var background = document.querySelector(".container-bg");
 
 var sliderControlsButton1 = document.querySelector("#slider-controls__slide1");
 var sliderControlsButton2 = document.querySelector("#slider-controls__slide2");
@@ -76,3 +76,4 @@ function removeBackground(){
         removeBackground();
         background.classList.add("red-bg");
     },10000);
+*/
